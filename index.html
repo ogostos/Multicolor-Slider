@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <title>Slider</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Multicolor Slider</h1>
+    <div class="form">
+      <div>
+        <label for="min">Lower bound</label>
+        <input type="number" id="min" onkeydown="checkPostiveInteger(event)" oninput="checkValidLimits()" placeholder="  < and != upper bound">
+      </div>
+      <div>
+        <label for="max">Upper bound</label>
+        <input type="number" id="max" onkeydown="checkPostiveInteger(event)" oninput="checkValidLimits()" placeholder="  > and != lower bound">
+      </div>
+      <button onclick="changeLimits()" id="limitButton" disabled>Apply limits</button>
+    </div>
+    <span id="val"></span>
+    <input id="slide" type="range" min="10" max="100" value="62" oninput="displayValue(event)" />
+  </div>
+</body>
+<script src="assets/slider.js"></script>
+</html>
