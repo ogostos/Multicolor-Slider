@@ -22,7 +22,7 @@ function displayValue (e) {
 function changeLimits () {
   const minVal = +min.value;
   const maxVal = +max.value;
-  const value = (maxVal - minVal) * (Math.random()*(0.8-0.2) + 0.2) + minVal;
+  const value = Math.floor((maxVal - minVal) * (Math.random()*(0.8-0.2) + 0.2) + minVal);
   slide.setAttribute('min', minVal);
   slide.setAttribute('max', maxVal);
   slide.setAttribute('value', value);
